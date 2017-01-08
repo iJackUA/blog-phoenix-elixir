@@ -1,0 +1,206 @@
+/* This file is for your main application css. */
+/*******************************
+            Global
+*******************************/
+html {
+    font-size: 16px;
+}
+/*******************************
+            Global
+*******************************/
+#home .menu .right.menu > .mobile.item {
+    display: none;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="tel"],
+.ui.form input[type="text"],
+.ui.form input[type="url"] {
+    box-shadow: none;
+    border-color: #e6eaed;
+    background: #fff;
+}
+
+.ui.form {
+  input:focus:not([type]),
+  input[type="date"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="url"]:focus {
+      box-shadow: none;
+      border-color: #ddd;
+      background: #fff;
+  }
+}
+
+/*--------------
+    Masthead
+---------------*/
+#home .masthead {
+    background: rgb(24, 42, 115);
+    background: -moz-linear-gradient(-45deg, rgba(24, 42, 115, 1) 0%, rgba(33, 138, 174, 1) 69%, rgba(32, 167, 172, 1) 89%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(24, 42, 115, 1)), color-stop(69%, rgba(33, 138, 174, 1)), color-stop(89%, rgba(32, 167, 172, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(24, 42, 115, 1) 0%, rgba(33, 138, 174, 1) 69%, rgba(32, 167, 172, 1) 89%);
+    background: -o-linear-gradient(-45deg, rgba(24, 42, 115, 1) 0%, rgba(33, 138, 174, 1) 69%, rgba(32, 167, 172, 1) 89%);
+    background: -ms-linear-gradient(-45deg, rgba(24, 42, 115, 1) 0%, rgba(33, 138, 174, 1) 69%, rgba(32, 167, 172, 1) 89%);
+    background: linear-gradient(135deg, rgba(24, 42, 115, 1) 0%, rgba(33, 138, 174, 1) 69%, rgba(32, 167, 172, 1) 89%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#182a73', endColorstr='#20a7ac', GradientType=1);
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0 0;
+
+    .column {
+        position: relative;
+        padding-bottom: 0;
+    }
+
+    .post-head-container {
+        background-color: #ffffff;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .bio {
+      min-height: 120px;
+      color: #ffffff;
+
+      .image {
+          img {
+              height: 70px;
+              border-radius: 35px;
+          }
+      }
+    }
+}
+
+.ui.secondary.pointing.menu {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ui.menu .logo.item {
+    color: #fff;
+    font-size: 1.3em;
+    line-height: 0.9em;
+    padding-left: 0 !important;
+}
+
+.ui.menu .item {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.ui.secondary.pointing.menu > .item,
+.ui.secondary.pointing.menu > .menu > .item {
+    border-bottom-width: 1px;
+    margin: 0 0 -1px;
+}
+
+.ui.secondary.pointing.menu .item .ui.input input {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ui.secondary.pointing.menu .item i {
+    margin-right: 3px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ui.secondary.pointing.menu > .item:not(.logo),
+.ui.secondary.pointing.menu > .menu > .item:not(.logo) {
+    padding: 1em 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.ui.secondary.pointing.menu > .link.item:hover,
+.ui.secondary.pointing.menu > .menu > .link.item:hover,
+.ui.secondary.pointing.menu > .menu > a.item:hover,
+.ui.secondary.pointing.menu > a.item:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ui.secondary.pointing.menu > .item.active,
+.ui.secondary.pointing.menu > .menu > .item.active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ui.secondary.pointing.menu > .item.active,
+.ui.secondary.pointing.menu > .menu > .item.active {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/*--------------
+    Footer
+---------------*/
+#home .footer.segment {
+    background-color: #000000;
+    padding: 3rem 0;
+    background: rgb(14, 21, 58);
+    background: -moz-linear-gradient(45deg, rgba(14, 21, 58, 1) 0%, rgba(115, 107, 147, 1) 48%, rgba(243, 201, 215, 1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(14, 21, 58, 1)), color-stop(48%, rgba(115, 107, 147, 1)), color-stop(100%, rgba(243, 201, 215, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(14, 21, 58, 1) 0%, rgba(115, 107, 147, 1) 48%, rgba(243, 201, 215, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(14, 21, 58, 1) 0%, rgba(115, 107, 147, 1) 48%, rgba(243, 201, 215, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(14, 21, 58, 1) 0%, rgba(115, 107, 147, 1) 48%, rgba(243, 201, 215, 1) 100%);
+    background: linear-gradient(45deg, rgba(14, 21, 58, 1) 0%, rgba(115, 107, 147, 1) 48%, rgba(243, 201, 215, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#0e153a', endColorstr='#f3c9d7', GradientType=1);
+}
+/*******************************
+          Responsive
+*******************************/
+/* Mobile Only */
+@media only screen and (max-width: 768px) {
+    #home .menu .right.menu > .item {
+        display: none;
+    }
+
+    #home .menu .right.menu > .mobile.item {
+        display: block;
+    }
+
+    #home .menu .right.menu > .mobile.item .menu {
+        left: auto;
+        right: 0;
+    }
+
+    #home .masthead.segment .information {
+        margin-left: 170px;
+    }
+
+    #home .masthead.segment .image {
+        width: 170px;
+    }
+
+    #home .masthead.segment .button {
+        font-size: 1rem;
+    }
+
+    #home .overview .divided.grid .header .icon {
+        font-size: 1.5em;
+    }
+
+    #home .overview .divided.grid .header+p {
+        min-height: 0;
+    }
+
+    #home .masthead.segment .column {
+        font-size: 0.7rem;
+    }
+
+    #home .masthead.segment .column p {
+        display: none;
+    }
+
+    #home .selection.list .right.floated {
+        display: none;
+    }
+}
+/*******************************
+          Customization
+*******************************/
