@@ -1,0 +1,8 @@
+<h1>POSTS:</h1>
+
+<%= for post <- @posts do %>
+<div class="ui segment">
+  <p>ID: <%= post.id %></p>
+  <p>Short Text: <%= Enum.at(post.post_langs, 0).short_text_md %></p>
+</div>
+<%= end %>

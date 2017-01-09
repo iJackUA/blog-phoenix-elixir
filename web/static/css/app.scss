@@ -63,14 +63,8 @@ html {
         padding-bottom: 0;
     }
 
-    .post-head-container {
-        background-color: #ffffff;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-
     .bio {
-      min-height: 120px;
+      min-height: 115px;
       color: #ffffff;
 
       .image {
@@ -204,3 +198,8 @@ html {
 /*******************************
           Customization
 *******************************/
+
+.content-container {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}

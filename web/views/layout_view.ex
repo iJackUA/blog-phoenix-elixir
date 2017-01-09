@@ -7,16 +7,7 @@ defmodule Blog.LayoutView do
   end
 
   def main_menu(_conn) do
-      menu =
-      Blog.Category.all
-      |> Enum.map(fn(cat) ->
-       "<a class='item' href='#{cat[:url]}'>
-         #{cat[:titles][:en]}
-       </a>"
-      end)
-      |> Enum.join
-
-      raw(menu)
+    Enum.map(Blog.Category.all, &(content_tag(:a, &1[:titles][:en], href: &1[:url], class: "item")))
   end
 
 end

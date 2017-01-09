@@ -64,62 +64,53 @@
 <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
 <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-<div class="bio ui stackable grid">
-    <div class="image two wide column">
-      <%= img_tag('/images/avatar.jpeg') %>
-    </div>
-    <div class="description fourteen wide column">
-      <b>Ievgen Kuzminov "iJackUA"</b>
-      <br>
-      Web Team Lead at MobiDev (Kharkiv, Ukraine)
-      <div class="social">
-        <a href="http://ua.linkedin.com/in/kuzminov/" target="_blank"><i class="icon-linkedin-squared"></i></a>
-        <a href="https://github.com/iJackUA" target="_blank"><i class="icon-github-squared"></i></a>
-        <a href="https://plus.google.com/+EvgeniyKuzminov?rel=author" target="_blank"><i class="icon-gplus-squared"></i></a>
-      </div>
-    </div>
-</div>
-
-<div class="post-head-container">
-
-  <h1>Post Title</h1>
-  <div class="ui horizontal divider">2017.01.10 15:20</div>
-
-  <main role="main">
-    <%= render @view_module, @view_template, assigns %>
-  </main>
-</div>
+        <div class="bio ui stackable grid">
+            <div class="image two wide column">
+              <%= img_tag('/images/avatar.jpeg') %>
+            </div>
+            <div class="description fourteen wide column">
+              <b>Ievgen Kuzminov "iJackUA"</b>
+              <br>
+              Web Team Lead at MobiDev (Kharkiv, Ukraine)
+              <div class="social">
+                <a href="http://ua.linkedin.com/in/kuzminov/" target="_blank"><i class="icon-linkedin-squared"></i></a>
+                <a href="https://github.com/iJackUA" target="_blank"><i class="icon-github-squared"></i></a>
+                <a href="https://plus.google.com/+EvgeniyKuzminov?rel=author" target="_blank"><i class="icon-gplus-squared"></i></a>
+              </div>
+            </div>
+        </div>
 
       </div>
     </div>
   </div>
 
   <div class="ui vertical segment">
-    <div class="ui page grid">
+    <div class="ui page grid content-container">
 
-            <p class="ui centered lead">
-            Many Companies Rely on Our Cat Knowledge
-            </p>
-          <br/>
+        <h1>Post Title</h1>
+        <div class="ui horizontal divider">2017.01.10 15:20</div>
+
+        <%= render @view_module, @view_template, assigns %>
+
     </div>
 
-  <div class="ui inverted footer vertical segment center">
-    <div class="ui stackable center aligned page grid">
-      <div class="three column row">
-
-        <div class="column">
-          <%= img_tag("/images/madeinukraine.png") %>
+    <div class="footer ui inverted vertical segment center">
+      <div class="ui stackable center aligned page grid">
+        <div class="three column row">
+          <div class="column">
+            <%= img_tag("/images/madeinukraine.png") %>
+          </div>
+          <div class="column">
+            &copy; Ievgen Kuzminov (<%= copy_year %>)
+          </div>
+          <div class="column">
+            Elixir, Phoenix & PostgreSQL inside <br>
+            Design based on: <a class="item" href="http://scripteden.com" rel="nofollow">ScriptEden</a>
+          </div>
         </div>
-        <div class="column">
-          &copy; Ievgen Kuzminov (<%= copy_year %>)
-        </div>
-        <div class="column">
-          Elixir, Phoenix & PostgreSQL inside <br>
-          Design based on: <a class="item" href="http://scripteden.com" rel="nofollow">ScriptEden</a>
-        </div>
+      </div>
     </div>
 
-  </div>
   </div>
 
   <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

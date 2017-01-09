@@ -2,17 +2,21 @@ defmodule Blog.PostLang do
   use Blog.Web, :model
 
   schema "post_langs" do
-    field :post_id, :integer
     field :lang, :string
+    field :status, :integer
     field :seo_url, :string
     field :embed_url, :string
-    field :short_text, :string
-    field :extended_text, :string
+    field :short_text_md, :string
+    field :short_text_html, :string
+    field :extended_text_md, :string
+    field :extended_text_html, :string
     field :kudos_count, :integer
     field :og_title, :string
     field :og_image, :string
     field :og_video, :string
     field :og_description, :string
+
+    belongs_to :post, Blog.Post
 
     timestamps()
   end

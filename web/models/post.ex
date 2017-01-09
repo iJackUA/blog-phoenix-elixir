@@ -5,6 +5,9 @@ defmodule Blog.Post do
     field :type, :integer
     field :category_id, :integer
 
+    has_many :post_langs, Blog.PostLang
+    has_one :post_for_lang, Blog.PostLang
+
     timestamps()
   end
 

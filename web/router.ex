@@ -21,8 +21,10 @@ defmodule Blog.Router do
   scope "/", Blog do
     pipe_through :browser
 
-    get "/:lang", PageController, :index
-    get "/:lang/:slug", PageController, :view
+    get "/", FrontController, :index
+    get "/:lang", FrontController, :index
+    get "/:lang/cat/:slug", FrontController, :category_index
+    get "/:lang/:slug", FrontController, :view
   end
 
   scope "/admin", Blog do
