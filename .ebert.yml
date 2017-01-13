@@ -1,0 +1,16 @@
+styleguide: iJackUA/blog-phoenix-elixir
+engines:
+  credo:
+    enabled: true
+  scss-lint:
+    enabled: true
+  fixme:
+    enabled: true
+  duplication:
+    enabled: true
+    exclude_paths:
+      - app/views/**/*
+exclude_paths:
+- config
+- priv/repo
+- test
