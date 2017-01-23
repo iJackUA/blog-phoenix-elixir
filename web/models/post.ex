@@ -5,8 +5,7 @@ defmodule Blog.Post do
     field :type, :integer
     field :category_id, :integer
 
-    has_many :post_langs, Blog.PostLang
-    has_one :post_for_lang, Blog.PostLang
+    has_many :contents, {"post_contents", Blog.PostContent}, foreign_key: :post_id
 
     timestamps()
   end

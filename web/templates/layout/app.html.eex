@@ -101,7 +101,7 @@
             <%= img_tag("/images/madeinukraine.png") %>
           </div>
           <div class="column">
-            &copy; Ievgen Kuzminov (<%= copy_year %>)
+            &copy; Ievgen Kuzminov (<%= copy_year() %>)
           </div>
           <div class="column">
             Elixir, Phoenix & PostgreSQL inside <br>

@@ -1,15 +1,13 @@
-defmodule Blog.PostLang do
+defmodule Blog.PostContent do
   use Blog.Web, :model
 
-  schema "post_langs" do
+  schema "post_contents" do
     field :lang, :string
     field :status, :integer
     field :seo_url, :string
     field :embed_url, :string
-    field :short_text_md, :string
-    field :short_text_html, :string
-    field :extended_text_md, :string
-    field :extended_text_html, :string
+    field :short_text, :string
+    field :extended_text, :string
     field :kudos_count, :integer
     field :og_title, :string
     field :og_image, :string

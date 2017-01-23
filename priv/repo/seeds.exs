@@ -15,16 +15,14 @@ post = Blog.Repo.insert!(%Blog.Post{
   category_id: 1
   })
 
-Blog.Repo.insert!(%Blog.PostLang{
+Blog.Repo.insert!(%Blog.PostContent{
   post_id: post.id,
   lang: "en",
   status: 1,
   seo_url: "hello-www",
   embed_url: "http://github.com",
-  short_text_md: "short_text. Hello www MD",
-  short_text_html: "short_text. Hello www HTML",
-  extended_text_md: "extended_text. Hello www MD",
-  extended_text_html: "extended_text. Hello www HTML",
+  short_text: "short_text. Hello www HTML",
+  extended_text: "extended_text. Hello www HTML",
   kudos_count: 123,
   og_title: "og_title. Hello www",
   og_image: "og_image. Hello www",
@@ -37,16 +35,14 @@ post2 = Blog.Repo.insert!(%Blog.Post{
   category_id: 2
   })
 
-Blog.Repo.insert!(%Blog.PostLang{
+Blog.Repo.insert!(%Blog.PostContent{
   post_id: post2.id,
   lang: "ua_ru",
   status: 1,
   seo_url: "agov_blog",
   embed_url: "http://github.com",
-  short_text_md: "short_text. Agov MD",
-  short_text_html: "short_text. Agov HTML",
-  extended_text_md: "extended_text. Agov MD",
-  extended_text_html: "extended_text. Agov HTML",
+  short_text: "short_text. Agov HTML",
+  extended_text: "extended_text. Agov HTML",
   kudos_count: 123,
   og_title: "og_title. Agov www",
   og_image: "og_image. Agov www",
