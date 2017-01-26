@@ -21,7 +21,8 @@
   <link href="http://stdout.in/en" rel="canonical"> -->
 
   <link rel="shortcut icon" href="favicon.ico" type="image/png">
-  <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/vendor.css") %>">
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/front.css") %>">
 </head>
 
 <body id="home">
@@ -113,7 +114,8 @@
 
   </div>
 
-  <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
+  <script src="<%= static_path(@conn, "/js/front.js") %>"></script>
 </body>
 
 </html>

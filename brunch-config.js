@@ -2,7 +2,11 @@ exports.config = {
     // See http://brunch.io/#documentation for docs.
     files: {
         javascripts: {
-            joinTo: "js/app.js",
+            joinTo: {
+              "js/vendor.js": /^(web\/static\/js)/,
+              "js/front.js": /^(web\/static\/js\/front)/,
+              "js/admin.js": /^(web\/static\/js\/admin)/
+            },
 
             // To use a separate vendor.js bundle, specify two files path
             // http://brunch.io/docs/config#-files-
@@ -19,13 +23,21 @@ exports.config = {
             }
         },
         stylesheets: {
-            joinTo: "css/app.css",
+            joinTo: {
+              "css/vendor.css": /^(web\/static\/css)/,
+              "css/front.css": /^(web\/static\/css\/front)/,
+              "css/admin.css": /^(web\/static\/css\/admin)/
+            },
             order: {
                 after: ["web/static/css/app.scss"] // concat app.scss last
             }
         },
         templates: {
-            joinTo: "js/app.js"
+            joinTo: {
+              "js/vendor.js": /^(web\/static\/js)/,
+              "js/front.js": /^(web\/static\/js\/front)/,
+              "js/admin.js": /^(web\/static\/js\/admin)/
+            }
         }
     },
 
@@ -60,9 +72,9 @@ exports.config = {
     },
 
     modules: {
-        autoRequire: {
-            "js/app.js": ["web/static/js/app"]
-        }
+        // autoRequire: {
+        //     "js/app.js": ["web/static/js/app"]
+        // }
     },
 
     npm: {
