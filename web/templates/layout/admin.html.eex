@@ -22,14 +22,14 @@
       </a>
       <a href="#" class="item">Posts</a>
       <a href="#" class="item">Pages</a>
-      <a href="#" class="item right aligned">Log Out</a>
+      <%= button "Log out", to: main_path(@conn, :logout),
+          method: :delete, form: [class: "item right aligned"] %>
+
       </div>
   </div>
 
-  <div class="ui main text container">
-    <h1 class="ui header">Semantic UI Fixed Template</h1>
-    <p>This is a basic fixed menu template using fixed size containers.</p>
-    <p>A text container is used for the main container, which is useful
+  <div class="ui main container">
+    <%= render @view_module, @view_template, assigns %>
   </div>
 
   <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>

@@ -11,7 +11,7 @@ defmodule Blog.Router do
   end
 
   pipeline :admin_auth do
-    #todo: add auth check for admin controller
+    plug Blog.AuthPlug, repo: Blog.Repo
   end
 
   pipeline :api do
@@ -38,11 +38,17 @@ defmodule Blog.Router do
 
 
   scope "/admin", Blog do
+    pipe_through [:browser]
+
+    get "/login", Admin.MainController, :login
+    post "/login", Admin.MainController, :perform_login
+  end
+
+  scope "/admin", Blog do
     pipe_through [:browser, :admin_auth]
 
-    get "/", Admin.PostController, :index
-    get "/login", Admin.MainController, :login
-    get "/logout", Admin.MainController, :logout
-    resources "/posts", Admin.PostController, except: [:show]
+    delete "/logout", Admin.MainController, :logout
+    get "/", Admin.PostController, :index, as: :admin
+    resources "/posts", Admin.PostController, except: [:show], as: :admin_post
   end
 end
