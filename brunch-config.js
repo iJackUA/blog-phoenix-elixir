@@ -25,7 +25,7 @@ exports.config = {
         },
         stylesheets: {
             joinTo: {
-              "css/vendor.css": /^(web\/static\/css\/vendor)/,
+              "css/vendor.css": /^(web\/static\/css\/vendor|node_modules)/,
               "css/front.css": /^(web\/static\/css\/front)/,
               "css/admin.css": /^(web\/static\/css\/admin)/
             },
@@ -63,7 +63,7 @@ exports.config = {
     plugins: {
         babel: {
             // Do not use ES6 compiler in vendor code
-            ignore: [/web\/static\/js\/vendor/]
+            ignore: [/web\/static\/js\/vendor/],
         },
         sass: {
             mode: "native"
@@ -82,6 +82,9 @@ exports.config = {
        enabled: true,
        aliases: {
          vuejs: 'vue/dist/vue.common.js'
-       }
+       },
+       styles: {
+        "medium-editor": ['dist/css/medium-editor.min.css', 'dist/css/themes/default.css']
+      }
      }
 };
