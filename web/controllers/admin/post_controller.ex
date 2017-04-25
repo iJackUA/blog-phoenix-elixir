@@ -5,6 +5,8 @@ defmodule Blog.Admin.PostController do
   plug :put_layout, :admin
 
   def index(conn, _params) do
+    JS.put conn, "post", %{name: "AAA", title: "BBBB"}
+
     posts = Repo.all(Post)
     render(conn, :index, posts: posts)
   end

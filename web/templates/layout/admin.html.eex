@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/vendor.css") %>">
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/admin.css") %>">
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/components.css") %>">
+
+  <%= JS.print_global_js_variables(@conn) %> 
 </head>
 <body>
 

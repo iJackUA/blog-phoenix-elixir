@@ -41,7 +41,8 @@ defmodule Blog.Mixfile do
      {:cowboy, "~> 1.0"},
      {:timex, "~> 3.0"},
      {:credo, "~> 0.3", only: [:dev, :test]},
-     {:monadex, "~> 1.1"}
+     {:monadex, "~> 1.1"},
+     {:poison, "~> 2.0"}
    ]
   end
 

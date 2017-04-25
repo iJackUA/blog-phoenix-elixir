@@ -3,7 +3,7 @@ defmodule Blog.AuthPlug do
   import Phoenix.Controller
 
   def init(opts) do
-    Keyword.fetch!(opts, :repo)
+    
   end
 
   def call(conn, repo) do
